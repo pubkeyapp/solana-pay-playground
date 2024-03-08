@@ -1,5 +1,5 @@
 import { AnchorProvider } from '@coral-xyz/anchor'
-import { WalletModalProvider, WalletMultiButton } from '@pubkeyapp/wallet-adapter-mantine-ui'
+import { WalletModalProvider, WalletMultiButton, WalletMultiIcon } from '@pubkeyapp/wallet-adapter-mantine-ui'
 import { WalletError } from '@solana/wallet-adapter-base'
 import {
   AnchorWallet,
@@ -13,6 +13,7 @@ import { clusterApiUrl } from '@solana/web3.js'
 import { ReactNode, useCallback } from 'react'
 
 export const WalletButton = WalletMultiButton
+export const WalletIcon = WalletMultiIcon
 
 export function SolanaProvider({ children }: { children: ReactNode }) {
   const endpoint = clusterApiUrl('devnet')

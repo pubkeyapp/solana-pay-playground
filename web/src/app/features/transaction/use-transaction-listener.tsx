@@ -27,7 +27,7 @@ export function useTransactionListener(reference: PublicKey) {
         }
         console.error('Unknown error', e)
       }
-    }, 500)
+    }, 1000)
     return () => {
       clearInterval(interval)
     }

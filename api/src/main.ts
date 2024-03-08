@@ -1,15 +1,9 @@
-import express from 'express'
-import { transactionRoutes } from './transaction/transaction-routes'
+import * as dotenv from 'dotenv'
+import { server } from './server'
+import { getServerConfig, ServerConfig } from './server-config'
 
-const host = process.env.HOST ?? '0.0.0.0'
-const port = process.env.PORT ? Number(process.env.PORT) : 3000
+dotenv.config()
 
-const app = express()
+const config: ServerConfig = getServerConfig()
 
-app.use(express.json())
-
-transactionRoutes(app)
-
-app.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`)
-})
+server(config).catch((e) => console.error(`An error occurred:`, e))

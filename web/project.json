@@ -53,7 +53,7 @@
         "port": 4444,
         "host": "0.0.0.0",
         "verbose": true,
-        "allowedHosts": "solana-pay.ngrok.io",
+        "allowedHosts": "solana-pay.ngrok.io,solana-pay-foo.ngrok.io,solana-pay-bar.ngrok.io",
         "disableHostCheck": true,
         "proxyConfig": "web/proxy.conf.json"
       },

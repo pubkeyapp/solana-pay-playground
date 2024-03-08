@@ -45,3 +45,7 @@ pnpm dev:web
 Solana Pay requires https to work, so in development you need something like [ngrok](https://ngrok.com/) to expose your local server to the internet.
 
 Be sure to update the `allowedHosts` property in `web/project.json` to allow the ngrok URL.
+
+```sh
+pnpm tunnel
+```

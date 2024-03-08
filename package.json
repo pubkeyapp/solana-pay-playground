@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "dev:api": "nx run api:serve",
-    "dev:web": "nx run web:serve"
+    "dev:web": "nx run web:serve",
+    "tunnel": "ngrok http --domain solana-pay.ngrok.io 4444"
   },
   "private": true,
   "devDependencies": {
